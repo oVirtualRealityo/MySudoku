@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Su?Do.Ku!</title>
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/sudokuCSS.css">
+
+    <script type="module" src="JS/sudokuScript.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="">Daily Challenge.</a>
+            <a href="">Weekly Challenge.</a>
+            <a href="">LeaderBoard</a>
+        </nav>
+        <section>
+            <h1>SuDoKu</h1>
+        </section>
+        <nav>
+            <a href="">About & More</a>
+            <a href="">Support Us</a>
+            <a href="">Contact</a>
+        </nav>
+        
+    </header>
+    <main>
+        <section id="greyScale" class="hidden101"></section>
+        <h2>play now, challenge friends, get smarter! w.i.p.</h2>
+        <hr>
+        <section class="playingField">
+            <section id="failedOrFixed" class="hidden101" >
+                <h3>You've completed the puzzle!</h3>
+                <h4>Your Score: <span id="endScore"></span></h4>
+                <h4>Your did it in: <span id="totalTime"></span></h4>
+                <hr>
+                <p>Wilt u nog een Sudoku doen? </p>
+                <button id="reRun">Klik dan hier!</button>
+            </section>
+        <section class="fullLength">
+            <h4>
+                Time:
+            <span id="timeFieldMin">
+                00:00
+            </span>
+            </h4>
+            <h3>Score: <span id="scoreField">0</span></h3>
+            <h4>Mistakes: <span id="lifeField">0</span></h4>           
+        </section>
+            <section id="sudokuField"></section>
+            <section id="choices"></section>
+            <section id="playSudoku">
+                <h2>Welcome to Sudoku</h2>
+                <h4>Let's play a game! Can you beat the <a href="">Leaders</a>?</h4>
+                <section class="forForm">
+                <form action="" id="playForm">
+                    <label for="selectDiff">Select your difficulty.</label>
+                    <select name="selectDiff" id="selectDiff">
+                        <option value="1">BEGINNER</option>
+                        <option value="2">MEDIUM</option>
+                        <option value="3">HARD</option>
+                        <option value="4">MASTER</option> 
+
+                    </select>
+                    <button id="startButton" type="submit">BEGIN</button>
+                </form>
+                </section>
+                <hr>
+                <p class="boxText">playing at least one game a day can boost memory and brain functions!</p>
+                
+                <section class="moreGames">
+                    <article> <h4>New game <br> coming soon</h4></article>
+                    <article> <h4>New game <br> coming soon</h4></article>
+                    <article> <h4>New game <br> coming soon</h4></article>
+
+                </section>
+            </section>
+        </section>
+
+
+        <hr>
+        <section>
+            <article>
+                <h3>Did you know?</h3>
+                <p>
+                    That playing sudoku can Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi officia reprehenderit ut illo debitis non? Aut soluta voluptatem modi commodi nostrum dolore quos asperiores esse ipsa quibusdam? Expedita, ab adipisci!
+                </p>
+            </article>
+            <article>
+                <h3>Discover more games like these.</h3>
+                <p>
+                    I am an independet programmer learning the trade, any suggestions or support would be greatly appreciated.
+                </p>
+            </article>
+        </section>
+        <hr>
+        <section class="fullLength">
+            <article>1</article>
+            <article>2</article>
+            <article>3</article>
+            <article>4</article>
+        </section>
+    </main>
+    <footer>hoi</footer>
+</body>
+</html>
