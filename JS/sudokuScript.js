@@ -6,6 +6,9 @@ let controlArray = [];
 let newArray = [];
 let timeField = document.getElementById('timeFieldMin');
 let scoreField = document.getElementById('scoreField');
+let scoreBox = document.getElementById('endScore');
+let timeBox = document.getElementById('totalTime');
+let errorCounter = document.getElementById('lifeField');
 let totalScore = 0;
 let streakScore = 0;
 let totalSeconds = 0;
@@ -211,7 +214,6 @@ function selectAFieldTile() {
             streakScore++;
         }
         else {
-            let errorCounter = document.getElementById('lifeField');
             errors = errors + 1;
             errorCounter.innerHTML = "";
             errorCounter.textContent = errors;
@@ -289,8 +291,7 @@ document.getElementById('sudokuField').addEventListener('click', function() {
         let victoryMessage = document.getElementById('failedOrFixed');
         victoryMessage.classList.toggle('hidden101');
         console.log(victoryMessage);
-        let scoreBox = document.getElementById('endScore');
-        let timeBox = document.getElementById('totalTime');
+
         scoreBox.textContent = totalScore;
         let minutes = Math.floor(totalSeconds / 60);
         let seconds = totalSeconds % 60;
@@ -314,11 +315,20 @@ document.getElementById('reRun').addEventListener("click", function(e) {
         formBox.classList.toggle('hidden101');
         errors = 0;
         totalScore = 0;
-        totalSeconds = 0;
+        totalSeconds = 0;    
+        scoreField.textContent = '00'
+        errorCounter.textContent = "0"
+        timeField.textContent = "00:00"
 })
 // DE HOOFD LISTENER
 playForm.addEventListener('submit', function(e) {  
     e.preventDefault();
+        errors = 0;
+        totalScore = 0;
+        totalSeconds = 0;    
+        scoreField.textContent = '00'
+        errorCounter.textContent = "0"
+        timeField.textContent = "00:00"
     let difficulty = parseInt(document.getElementById('selectDiff').value);
     newSudokuPuzzle(difficulty); // prio 1
     generateSudokuField(); // prio 2
